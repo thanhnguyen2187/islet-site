@@ -13,10 +13,10 @@ tags:
   - frontend
 ---
 
-In this port, I will share the patterns that I found while working with Angular
-in the hope that it will be useful for someone (or at least me in the future).
-The word "pattern" is used in the sense of a common recurrence of working flow,
-or solving problem flow, and a way to solve the type of problem.
+I named this post "Good" Practices, not "Best", since I believe that there is
+hardly a silver bullet that can be used to solve everything, technical oriented
+or not. They are good since they fit within my case, and I hope that it would
+give you some insights on how to do stuff yourself.
 
 ## Workspace and Projects
 
