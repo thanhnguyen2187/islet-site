@@ -1,0 +1,66 @@
+baseURL      = "https://nguyenhuythanh.com/"
+languageCode = "en-us"
+title        = "Thanh's Islet"
+theme        = "hello-friend-ng"
+paginate     = 10
+rssLimit     = 10
+enableGitInfo = true
+
+# PygmentsCodeFences = true
+# PygmentsStyle = "monokai"
+
+[author]
+  name = "Thanh Nguyen"
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[params]
+  dateform        = "02-01-2006"
+  dateformShort   = "02-01"
+  dateformNum     = "02-01-2006"
+  dateformNumTime = "15:04 02-01-2006"
+
+  homeSubtitle = "\"islet\" means a small island 🏝️"
+
+  disableReadOtherPosts = false
+  enableThemeToggle = true
+
+  [params.footer]
+    trademark = true
+    rss = true
+    author = true
+
+  [params.logo]
+    logoText     = "islet"
+    logoHomeLink = "/"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/thanhnguyen2187"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:thanhnguyen2187@gmail.com"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/thanh-nguyen-1864a2166"
+
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+  series   = "series"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"
