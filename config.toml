@@ -21,8 +21,8 @@ enableGitInfo = true
 [params]
   dateform        = "02-01-2006"
   dateformShort   = "02-01"
-  dateformNum     = "02-01-2006"
-  dateformNumTime = "15:04 02-01-2006"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
 
   homeSubtitle = "\"islet\" means a small island 🏝️"
 
