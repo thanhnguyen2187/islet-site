@@ -19,8 +19,8 @@ enableGitInfo = true
     ordered = false
 
 [params]
-  dateform        = "02-01-2006"
-  dateformShort   = "02-01"
+  dateform        = "2006-01-02"
+  dateformShort   = "01-02"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
 
