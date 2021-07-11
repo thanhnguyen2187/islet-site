@@ -71,3 +71,6 @@
 {{- if .Site.GoogleAnalytics }}
     {{ template "_internal/google_analytics.html" . }}
 {{- end}}
+
+<!-- MathJax -->
+{{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
