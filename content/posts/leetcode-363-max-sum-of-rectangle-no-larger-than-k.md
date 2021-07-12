@@ -12,8 +12,9 @@ tags:
 ---
 
 I struggled with the problem for a while, and reading a lot of explanations did
-help, but I thought that it would be great if there is something better. The
-post is a "reference" in the sense that I am going to clarify some sample codes.
+help, but I thought that it would be great if there had been something better.
+The post is a "reference" in the sense that I am going to clarify some sample
+codes.
 
 ## Description
 
