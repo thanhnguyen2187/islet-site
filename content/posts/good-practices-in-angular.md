@@ -116,3 +116,7 @@ library against changes.
 ## Directive
 
 ## Conclusions
+
+## External Links
+
+- https://angular.io/guide/file-structure
