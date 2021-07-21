@@ -109,7 +109,262 @@ ng serve --project first-app --port 4200
 Another useful option that I often use with libraries is `--watch`, to build the
 library against changes.
 
-## Module
+## "Clean" Importing
+
+The Official Documentation has some lengthy and verbose descriptions on Module,
+but I will try to make it clearer and more comprehensive: _Angular Module is the
+Angular's way to group source files_, nothing more or less.
+
+New developer often skip Module creating, and I do not blame them for that (as I
+did not care about Module at first, either). When the application gets bigger
+and need to be splitted into smaller chunks, we then do see how Angular Module
+shines. Lazy loading is another important feature that we need to notice.
+
+At first, let us create an application somewhere, and say yes to routing since
+it is going to be useful later:
+
+```bash
+ng new sample-app
+# cd sample-app
+```
+
+Our newly-created application shall look like this:
+
+```
+/.../sample-app
+├── angular.json
+├── karma.conf.js
+├── node_modules
+│  ├── @angular
+│  ├── @angular-devkit
+│  ├── ...
+│  └── zone.js
+├── package-lock.json
+├── package.json
+├── README.md
+├── src
+│  ├── app
+│  ├── assets
+│  ├── environments
+│  ├── favicon.ico
+│  ├── index.html
+│  ├── main.ts
+│  ├── polyfills.ts
+│  ├── styles.css
+│  └── test.ts
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.spec.json
+```
+
+Let us navigate into `src/app` and have a look at the main module called `app`,
+which is used to "bootstrap" the whole application (dear me from an alternative
+timeline which did not know what "bootstrap" is; it means you are
+starting/running the application using itself):
+
+```
+/.../sample-app/src/app
+├── app-routing.module.ts
+├── app.component.css
+├── app.component.html
+├── app.component.spec.ts
+├── app.component.ts
+└── app.module.ts
+```
+
+`app.module.ts` is the important one right now:
+
+```ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Let us create a new component:
+
+```bash
+ng generate component components/first-component
+```
+
+And look at how `app.module.ts` changed:
+
+```ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+// new line added
+import { FirstComponentComponent } from './components/first-component/first-component.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    // new line added
+    FirstComponentComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+It does not look bad, but let us imagine that we have the second, third, and
+fourth components...
+
+```bash
+ng generate component components/second-component
+ng generate component components/third-component
+ng generate component components/fourth-component
+```
+
+The file quickly becomes more convoluted:
+
+```ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+// new lines added
+import { FirstComponentComponent } from './components/first-component/first-component.component';
+import { SecondComponentComponent } from './components/second-component/second-component.component';
+import { ThirdComponentComponent } from './components/third-component/third-component.component';
+import { FourthComponentComponent } from './components/fourth-component/fourth-component.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    // new lines added
+    FirstComponentComponent,
+    SecondComponentComponent,
+    ThirdComponentComponent,
+    FourthComponentComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Typically, we should split our application into smaller components, and we then
+can imagine the mess within `app.module.ts`. This is one main reason why Angular
+Module got created.
+
+Our workflow evolves from a single step
+
+```bash
+ng generate component <component-name>
+```
+
+to a few steps:
+
+```bash
+ng generate module modules/feature
+ng generate component modules/feature/first-component
+ng generate component modules/feature/second-component
+ng generate component modules/feature/third-component
+```
+
+Our folder structure then becomes:
+
+```
+/tmp/sample-app/src
+├── app
+│  ├── app-routing.module.ts
+│  ├── ...
+│  └── app.module.ts
+├── assets
+├── environments
+│  ├── environment.prod.ts
+│  └── environment.ts
+├── favicon.ico
+├── index.html
+├── main.ts
+├── modules
+│  └── feature (*)
+│     ├── feature.module.ts
+│     ├── first-component
+│     ├── second-component
+│     └── third-component
+├── polyfills.ts
+├── styles.css
+└── test.ts
+```
+
+Let us have a look inside `feature-module.module.ts`:
+
+```ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FirstComponentComponent } from './first-component/first-component.component';
+import { SecondComponentComponent } from './second-component/second-component.component';
+import { ThirdComponentComponent } from './third-component/third-component.component';
+
+
+@NgModule({
+  declarations: [
+    FirstComponentComponent,
+    SecondComponentComponent,
+    ThirdComponentComponent
+  ],
+  imports: [
+    CommonModule
+  ]
+})
+export class FeatureModuleModule { }
+```
+
+Angular is "smart" (!) enough to add the components to the module itself. The
+last thing we have to do is add the module to the right place (in this example,
+we add it in `app.module.ts`):
+
+```ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { FeatureModule } from '../modules/feature/feature.module'
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    // the new module is added below
+    FeatureModule, 
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
 ## Getter and Setter
 
