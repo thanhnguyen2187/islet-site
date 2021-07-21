@@ -11,8 +11,8 @@ tags:
 To my dear, who received "A Piece of My Heart" in Vietnamese,
 
 I wrote you a letter with the same name, did I not? I still felt the urge to
-write you another, however. The letter would never be published however. I was
-too shy for that.
+write you another, even though the letter would never be published. I was too
+shy for that.
 
 As days went by, my heart still ached every time my mind is free. I arbitrarily
 thought about you, and our memories, and our stories. I missed you a lot. I
