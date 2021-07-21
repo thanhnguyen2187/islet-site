@@ -18,7 +18,7 @@ hardly a silver bullet that can be used to solve everything, technology oriented
 or not. The practices are good since they fit my case, and I hope that it would give you
 (or my future self) some useful insights.
 
-## Monorepo Development Style with Angular Workspace
+## Monorepo Development Style
 
 Normally, we are used to Angular CLI's `new` command:
 
