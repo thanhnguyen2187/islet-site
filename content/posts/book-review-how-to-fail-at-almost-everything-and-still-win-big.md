@@ -1,7 +1,7 @@
 ---
 title: "Book Review: How to Fail at Almost Everything and Still Win Big"
 date: 2021-07-23T22:36:47+07:00
-draft: true
+draft: false
 images:
 categories:
 tags:
