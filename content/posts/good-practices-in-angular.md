@@ -366,7 +366,17 @@ import { FeatureModule } from '../modules/feature/feature.module'
 export class AppModule { }
 ```
 
+To summarize the long section, we shall have an "action list":
+
 ## Getter and Setter
+
+It is good practice in Angular (and in every other programming language) to
+encapsulate our data.
+
+Let us come to a fictional "classic":
+
+```ts
+```
 
 ## Directive
 
