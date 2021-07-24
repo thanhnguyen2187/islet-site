@@ -131,7 +131,7 @@ from itertools import accumulate
 
 k = 4
 L = [...]
-prefixed_L = [...]
+prefixed_L = list(accumulate(L))
 
 maximal_sum = float("-inf")
 for right_index in range(0, len(L)),
@@ -161,7 +161,7 @@ from bisect import (
 
 k = 4
 L = [...]
-prefixed_L = accumulate(L)
+prefixed_L = list(accumulate(L))
 
 maximal_sum = float("-inf")
 encountered_sums = [0, float("inf")]
@@ -201,7 +201,7 @@ matrix = [
 ]
 ```
 
-We choose a random subrectangle:
+If we choose a random subrectangle:
 
 ```python
 matrix = [
