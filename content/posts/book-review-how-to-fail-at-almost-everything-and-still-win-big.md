@@ -1,5 +1,5 @@
 ---
-title: "Book Review: How to Fail at Almost Everything and Still Win Big"
+title: "Book Review: \"How to Fail at Almost Everything and Still Win Big\""
 date: 2021-07-23T22:36:47+07:00
 draft: false
 images:
