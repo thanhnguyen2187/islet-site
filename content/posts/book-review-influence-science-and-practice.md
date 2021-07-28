@@ -1,7 +1,7 @@
 ---
 title: "Book Review: \"Influence: Science and Practice\""
 date: 2021-07-28T18:37:52+07:00
-draft: true
+draft: false
 # toc: true
 images:
 categories:
