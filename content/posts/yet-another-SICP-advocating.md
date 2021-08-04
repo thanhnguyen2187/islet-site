@@ -14,10 +14,11 @@ tags:
 SICP stands for ["Structure and Interpretation of Computer
 Programs"](http://mitpress.mit.edu/sicp/full-text/book/book.html), also known as
 ["The Wizard Book"](https://wiki.c2.com/?TheWizardBook) is a book known for its
-challenging subjects, exercises, and rather "weird" writing style. I finished
-the first chapter, and working on the second chapter. The "LISP enlightenment"
-that people jokes about has not came upon me yet, but I found my thoughts on
-programming better already.
+challenging subjects, exercises, and rather "weird" writing style.
+
+I finished the first chapter and working on the second chapter. The "LISP
+enlightenment" that people jokes about has not came upon me yet, but I found my
+thoughts on programming better already.
 
 ![lisp-enlightenment](../images/lisp-enlightenment.png)
 
@@ -45,9 +46,13 @@ The way you "suppose" to read the book is not usual, either. From my experience,
 trying to skim the text and understand it leaves you a shallow confusion at
 best. I am not a fan of the writing style, but do read them carefully, and try
 your best implementing every exercises throughout. Only look at a solution on
-the internet after you did spend your time and get stuck. Also, do not be worry
-that LISP seems "dead". While parentheses looks confusing at first, you
-naturally get it after a while.
+the internet after you did spend your time and get stuck.
+
+Also, do not be worry that LISP seems "dead". Its syntax does not look familiar
+to the current popular languages (C, Java, Go, etc.), but its the thinking that
+sticks. You will definitely become a better programmer and thinker, no matter
+which language are you using.
 
 Good luck to you (and to my future self) on being a
-[SICPers](https://www.sicpers.info/) (mind you, the website do exists).
+[SICPers](https://www.sicpers.info/) (mind you, a website with the name do
+exists).
