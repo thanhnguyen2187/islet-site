@@ -1,7 +1,7 @@
 ---
 title: "Yet Another SICP Advocating"
 date: 2021-08-04T20:25:03+07:00
-draft: true
+draft: false
 toc: false
 images:
 categories:
