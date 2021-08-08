@@ -48,7 +48,7 @@ enableGitInfo = true
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/in/thanh-nguyen-1864a2166"
+    url  = "https://www.linkedin.com/in/nguyen-huy-thanh/"
 
 [taxonomies]
   category = "categories"
