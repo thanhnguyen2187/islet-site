@@ -45,6 +45,6 @@ sales, or even in the implementing of a... system, an information one).
 Understanding women (or men) helps you attracting them.
 
 In conclusion, I highly recommend the book to anyone, as long as they are open
-enough for some "small" profanity (concluding that extremely successful people
+enough for some "small" profanities (concluding that extremely successful people
 are mostly by luck; their systems were good enough, and they will be rich
 regardless, however).
