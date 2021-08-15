@@ -9,8 +9,6 @@ tags:
   - book-review
 ---
 
-![win-bigly](../images/win-bigly.png)
-
 After finished "How to Fail at Almost Everything and Still Win Big", I kind of
 liked the author, and searched for others book by him. "Win Bigly" certainly did
 not disappoint me. If I have to summarize the book, I will vaguely borrow the
@@ -42,5 +40,5 @@ of the author](./book-review-how-to-fail-at-almost-everything-and-still-win-big.
 > I highly recommend the book to anyone, as long as they are open enough for
 > some "small" profanities [...].
 
-(the profanity here is his praise of President Trump, which does not matter to
-an average Vietnamese dude like me, but bothers lots of Americans)
+(a profanity here is his praise of President Trump, which does not matter to an
+average Vietnamese dude like me, but bothers lots of Americans)
