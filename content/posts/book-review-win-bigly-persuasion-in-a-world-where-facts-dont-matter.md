@@ -1,7 +1,7 @@
 ---
 title: "Book Review: \"Win Bigly: Persuasion In A World Where Facts Don't Matter\""
 date: 2021-08-15T19:46:21+07:00
-draft: true
+draft: false
 toc: false
 images:
 categories:
