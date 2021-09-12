@@ -10,6 +10,7 @@ categories:
 tags:
   - lisp
   - sicp
+  - scheme
 ---
 
 It's been a while since I felt that... thrilled working on something. The
@@ -222,4 +223,5 @@ the input `list`s.
 ## Conclusion
 
 Just read my [Yet Another SICP Advocating](../yet-another-sicp-advocating). A
-messy implementation can be found on my GitHub.
+messy implementation can be found on my
+[GitHub](https://github.com/thanhnguyen2187/sicp-notes/blob/master/chapter-2/exercise-2.49.rkt).
