@@ -1,7 +1,7 @@
 ---
 title: "SICP 3.25"
 date: 2021-09-12T20:37:19+07:00
-draft: true
+draft: false
 toc: true
 images:
 categories:
